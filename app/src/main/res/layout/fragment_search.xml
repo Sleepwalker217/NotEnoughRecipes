@@ -7,7 +7,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.ui.fragment.SearchFragment">
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/search_bar_card_view"
         android:layout_width="0dp"
@@ -32,24 +31,26 @@
             android:text="testtesttesttesttesttesttestetsttesttest "
             android:maxLines="1"
             android:singleLine="true"
-            android:textSize="20sp"
-            android:hint="@string/enter_recipe_name"/>
+            android:textSize="20sp"/>
     </androidx.cardview.widget.CardView>
+
+    <Spinner
+        android:id="@+id/search_spinner"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/margin_std_10"
+        app:layout_constraintTop_toBottomOf="@id/search_bar_card_view"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/search_bar_card_view"
+        app:layout_constraintTop_toBottomOf="@id/search_spinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="@dimen/margin_std_10"
+        android:layout_marginHorizontal="@dimen/margin_std_10"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/tab_view"
         />
-
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
