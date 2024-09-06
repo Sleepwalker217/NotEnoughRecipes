@@ -8,9 +8,6 @@ interface MealDbApi {
     @GET("/api/json/v1/1/search.php")
     suspend fun searchByName(@Query("s") name: String): Result<MealRecipeResponse>
 
-    @GET("/api/json/v1/1/search.php")
-    suspend fun searchByFirstLetter(@Query("f") letter: String): Result<MealRecipeResponse>
-
     @GET("/api/json/v1/1/lookup.php")
     suspend fun searchById(@Query("i") id: String): Result<MealRecipeResponse>
 
